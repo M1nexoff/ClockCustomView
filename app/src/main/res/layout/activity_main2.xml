@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <uz.gita.customview.QRCode
+        android:id="@+id/qr_code"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:placeholderText="X Row"
+        app:layout_constraintEnd_toStartOf="@id/dwaa"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/qr_code">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="150dp"
+            android:inputType="number"
+            android:id="@+id/x"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dwaa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:placeholderText="Y column"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/qr_code">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="150dp"
+            android:id="@+id/y"
+            android:inputType="number"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/make"
+        android:layout_marginTop="32dp"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:text="Make new"
+        android:textSize="20dp"
+        android:backgroundTint="#1EEAEA"
+        app:layout_constraintEnd_toEndOf="@+id/dwaa"
+        app:layout_constraintStart_toStartOf="@+id/textInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/dwaa" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
